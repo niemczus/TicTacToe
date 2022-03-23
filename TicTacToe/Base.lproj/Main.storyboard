@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CIf-PB-NIL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,13 +29,13 @@
                                                     <constraint firstAttribute="height" constant="100" id="SFG-JF-sxK"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="X">
+                                                <buttonConfiguration key="configuration" style="plain" title="A1">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="60"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didTapA1Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Koq-JJ-sVn"/>
@@ -48,13 +48,13 @@
                                                     <constraint firstAttribute="width" constant="100" id="puh-tr-o8a"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="X">
+                                                <buttonConfiguration key="configuration" style="plain" title="A2">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="60"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didTapA2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FuT-ch-wKr"/>
@@ -67,13 +67,13 @@
                                                     <constraint firstAttribute="width" constant="100" id="y87-lu-tFQ"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="O">
+                                                <buttonConfiguration key="configuration" style="plain" title="A3">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="60"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didTapA3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yWB-bp-nLe"/>
@@ -91,13 +91,13 @@
                                                     <constraint firstAttribute="height" constant="100" id="eyH-Tq-GcW"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="O">
+                                                <buttonConfiguration key="configuration" style="plain" title="B1">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="60"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didTapB1Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RmM-MV-Ed4"/>
@@ -110,13 +110,13 @@
                                                     <constraint firstAttribute="height" constant="100" id="WIK-hx-kCc"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="O">
+                                                <buttonConfiguration key="configuration" style="plain" title="B2">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="60"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didTapB2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SS8-ZM-71W"/>
@@ -129,13 +129,13 @@
                                                     <constraint firstAttribute="width" constant="100" id="QdM-Qi-9ZM"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="X">
+                                                <buttonConfiguration key="configuration" style="plain" title="B3">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="60"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didTapB3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbi-c2-QOz"/>
@@ -153,13 +153,13 @@
                                                     <constraint firstAttribute="width" constant="100" id="eRx-yY-Nm1"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="X">
+                                                <buttonConfiguration key="configuration" style="plain" title="C1">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="60"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didTapC1Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QPn-mO-e06"/>
@@ -172,13 +172,13 @@
                                                     <constraint firstAttribute="width" constant="100" id="nuC-1R-0GP"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="O">
+                                                <buttonConfiguration key="configuration" style="plain" title="C2">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="60"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didTapC2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJr-Ji-CYz"/>
@@ -191,13 +191,13 @@
                                                     <constraint firstAttribute="height" constant="100" id="keX-Oe-jyH"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="X">
+                                                <buttonConfiguration key="configuration" style="plain" title="C3">
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <color key="strokeColor" systemColor="systemGray6Color"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="60"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="1"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didTapC3Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4h-cU-ga0"/>
@@ -211,68 +211,15 @@
                                     <constraint firstAttribute="width" constant="300" id="rwh-CF-y59"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu1-h0-psn">
-                                <rect key="frame" x="194" y="243" width="22.5" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-hz-0pm">
-                                <rect key="frame" x="291" y="243" width="23.5" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mB-NQ-W69">
-                                <rect key="frame" x="20" y="425" width="24" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJJ-1a-V9j">
-                                <rect key="frame" x="20" y="522" width="27.5" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elv-Hi-bgS">
-                                <rect key="frame" x="100" y="243" width="18" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnX-kj-ZAk">
-                                <rect key="frame" x="20" y="325" width="25.5" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="elv-Hi-bgS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="0QZ-Ko-MuY"/>
-                            <constraint firstItem="3WF-WF-e9o" firstAttribute="leading" secondItem="9mB-NQ-W69" secondAttribute="trailing" constant="13" id="3gD-Ma-cnX"/>
-                            <constraint firstItem="Pth-hz-0pm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="199" id="58G-XT-HAp"/>
-                            <constraint firstItem="Fu1-h0-psn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="199" id="7NQ-tO-1lN"/>
-                            <constraint firstItem="9mB-NQ-W69" firstAttribute="top" secondItem="KnX-kj-ZAk" secondAttribute="bottom" constant="53" id="8oC-CZ-bgA"/>
-                            <constraint firstItem="3WF-WF-e9o" firstAttribute="leading" secondItem="KnX-kj-ZAk" secondAttribute="trailing" constant="11.5" id="Fvm-4M-JSA"/>
-                            <constraint firstItem="KnX-kj-ZAk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="M1K-6B-J8z"/>
-                            <constraint firstItem="elv-Hi-bgS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="199" id="OrA-Yr-M49"/>
-                            <constraint firstItem="3WF-WF-e9o" firstAttribute="top" secondItem="Pth-hz-0pm" secondAttribute="bottom" constant="8" symbolic="YES" id="R4r-1R-tRV"/>
-                            <constraint firstItem="9mB-NQ-W69" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Raq-3O-UB3"/>
-                            <constraint firstItem="KnX-kj-ZAk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="281" id="Rhc-ge-yJY"/>
-                            <constraint firstItem="Pth-hz-0pm" firstAttribute="leading" secondItem="Fu1-h0-psn" secondAttribute="trailing" constant="74.5" id="TTd-YA-jVz"/>
-                            <constraint firstItem="3WF-WF-e9o" firstAttribute="leading" secondItem="fJJ-1a-V9j" secondAttribute="trailing" constant="9.5" id="bBz-Cg-3kq"/>
-                            <constraint firstItem="fJJ-1a-V9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bbw-gV-XaO"/>
-                            <constraint firstItem="3WF-WF-e9o" firstAttribute="top" secondItem="elv-Hi-bgS" secondAttribute="bottom" constant="8" symbolic="YES" id="crn-cM-ReR"/>
-                            <constraint firstItem="Fu1-h0-psn" firstAttribute="leading" secondItem="elv-Hi-bgS" secondAttribute="trailing" constant="76" id="k8V-ZR-1FY"/>
                             <constraint firstItem="3WF-WF-e9o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="obe-cZ-D4T"/>
-                            <constraint firstItem="3WF-WF-e9o" firstAttribute="top" secondItem="Fu1-h0-psn" secondAttribute="bottom" constant="8" symbolic="YES" id="rRY-Re-QQK"/>
-                            <constraint firstItem="fJJ-1a-V9j" firstAttribute="top" secondItem="9mB-NQ-W69" secondAttribute="bottom" constant="50" id="rVx-bZ-Jyw"/>
                             <constraint firstItem="3WF-WF-e9o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tXJ-f6-aqe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ApV-Ou-d4z"/>
                     <connections>
                         <outlet property="A1Button" destination="ZLX-zg-EQk" id="g74-p6-6jP"/>
                         <outlet property="A2Button" destination="cyO-Me-8Ra" id="bBU-jr-gSR"/>
@@ -286,6 +233,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="63.616071428571423"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fCL-vn-eoW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CIf-PB-NIL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NRT-nz-Wnk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jRq-d5-BdF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIq-he-ySs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-23.188405797101453" y="63.616071428571423"/>
         </scene>

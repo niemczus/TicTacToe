@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var C3Button: UIButton!
     
     var actualPlayerIsX = true
+    var end = false
+    var drawCounter = 0
     
     var choicesPlayerX = [String]()
     var choicesPlayerO = [String]()
@@ -39,38 +41,98 @@ class ViewController: UIViewController {
         NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 60),
         NSAttributedString.Key.foregroundColor: UIColor.white
     ])
+    let resetButtonTitle = NSMutableAttributedString(string: "", attributes: [
+        NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 60),
+        NSAttributedString.Key.foregroundColor: UIColor.white
+    ])
     
-    func checkAndChange() {
+    
+    
+    func checkIfWon(choicesOfPlayer: Array<String>) {
         
+        if      ["A1", "A2", "A3"].allSatisfy(choicesOfPlayer.contains) { end = true }
+        else if ["B1", "B2", "B3"].allSatisfy(choicesOfPlayer.contains) { end = true }
+        else if ["C1", "C2", "C3"].allSatisfy(choicesOfPlayer.contains) { end = true }
+        else if ["A1", "B1", "C1"].allSatisfy(choicesOfPlayer.contains) { end = true }
+        else if ["A2", "B2", "C2"].allSatisfy(choicesOfPlayer.contains) { end = true }
+        else if ["A3", "B3", "C3"].allSatisfy(choicesOfPlayer.contains) { end = true }
+        else if ["A1", "B2", "C3"].allSatisfy(choicesOfPlayer.contains) { end = true }
+        else if ["C1", "B2", "A3"].allSatisfy(choicesOfPlayer.contains) { end = true }
+        else { end = false }
         
+        drawCounter += 1
     }
     
-    func playerMove(sender: UIButton?) {
-        let buttonTitle = sender?.currentAttributedTitle
+    func wonAlert(playerName: String) {
+        let alert = UIAlertController(title: "Player \(playerName) won!", message: "Game over", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Play again", style: .default) { (_) in
+            self.restartGame()
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
+    
+    func drawAlert() {
+        let alert = UIAlertController(title: "It's a draw!", message: "Game over", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Play again", style: .default) { (_) in
+            self.restartGame()
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
+    
+    func restartGame() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController")
+        var viewcontrollers = self.navigationController!.viewControllers
+        viewcontrollers.removeLast()
+        viewcontrollers.append(vc)
+        self.navigationController?.setViewControllers(viewcontrollers, animated: true)
+    }
+    
+    func playerMove(sender: UIButton) {
+        let buttonTitle = sender.currentAttributedTitle
         if buttonTitle == nil {
+            guard let label = sender.titleLabel?.text else { return }
             if actualPlayerIsX {
-                sender?.setAttributedTitle(xButtonTitle, for: .normal)
-                actualPlayerIsX.toggle()
+                choicesPlayerX.append(label)
+                sender.setAttributedTitle(xButtonTitle, for: .normal)
+                print("X \(choicesPlayerX)")
+                checkIfWon(choicesOfPlayer: choicesPlayerX)
+                if end {
+                    wonAlert(playerName: "X")
+                } else {
+                    if drawCounter == 9 {
+                        drawAlert()
+                    }
+                    actualPlayerIsX.toggle()
+                }
+                
             } else {
-                sender?.setAttributedTitle(oButtonTitle, for: .normal)
-                actualPlayerIsX.toggle()
+                choicesPlayerO.append(label)
+                sender.setAttributedTitle(oButtonTitle, for: .normal)
+                print("O \(choicesPlayerO)")
+                checkIfWon(choicesOfPlayer: choicesPlayerO)
+                if end {
+                    wonAlert(playerName: "O")
+                } else {
+                    if drawCounter == 9 {
+                        drawAlert()
+                    }
+                    actualPlayerIsX.toggle()
+                }
             }
         } else {
-            print("Not allowed")
+            let alert = UIAlertController(title: "Not allowed", message: "You can't choose this spot", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Okay", style: .default)
+            alert.addAction(action)
+            present(alert, animated: true)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        A1Button.setTitle("", for: .normal)
-        A2Button.setTitle("", for: .normal)
-        A3Button.setTitle("", for: .normal)
-        B1Button.setTitle("", for: .normal)
-        B2Button.setTitle("", for: .normal)
-        B3Button.setTitle("", for: .normal)
-        C1Button.setTitle("", for: .normal)
-        C2Button.setTitle("", for: .normal)
-        C3Button.setTitle("", for: .normal)
+
     }
     
     //MARK: - Actions A
