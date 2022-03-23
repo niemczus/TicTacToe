@@ -14,7 +14,6 @@
 		32044D1C27E914EC007B943F /* TicTacToe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32044D1A27E914EC007B943F /* TicTacToe.xcdatamodeld */; };
 		32044D1E27E914ED007B943F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32044D1D27E914ED007B943F /* Assets.xcassets */; };
 		32044D2127E914ED007B943F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32044D1F27E914ED007B943F /* LaunchScreen.storyboard */; };
-		32D40C2D27E9FB17005DC368 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D40C2C27E9FB17005DC368 /* MyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		32044D1D27E914ED007B943F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32044D2027E914ED007B943F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32044D2227E914ED007B943F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32D40C2C27E9FB17005DC368 /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 				32044D1F27E914ED007B943F /* LaunchScreen.storyboard */,
 				32044D2227E914ED007B943F /* Info.plist */,
 				32044D1A27E914EC007B943F /* TicTacToe.xcdatamodeld */,
-				32D40C2C27E9FB17005DC368 /* MyButton.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -146,7 +143,6 @@
 			files = (
 				32044D1627E914EC007B943F /* ViewController.swift in Sources */,
 				32044D1227E914EC007B943F /* AppDelegate.swift in Sources */,
-				32D40C2D27E9FB17005DC368 /* MyButton.swift in Sources */,
 				32044D1C27E914EC007B943F /* TicTacToe.xcdatamodeld in Sources */,
 				32044D1427E914EC007B943F /* SceneDelegate.swift in Sources */,
 			);
@@ -304,6 +300,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +330,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

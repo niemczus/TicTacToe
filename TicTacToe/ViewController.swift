@@ -8,20 +8,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var playerMark: UILabel!
+    
     //MARK: - Outlet A
+    
     @IBOutlet weak var A1Button: UIButton!
     @IBOutlet weak var A2Button: UIButton!
     @IBOutlet weak var A3Button: UIButton!
     
     //MARK: - Outlet B
+    
     @IBOutlet weak var B1Button: UIButton!
     @IBOutlet weak var B2Button: UIButton!
     @IBOutlet weak var B3Button: UIButton!
     
     //MARK: - Outlet C
+    
     @IBOutlet weak var C1Button: UIButton!
     @IBOutlet weak var C2Button: UIButton!
     @IBOutlet weak var C3Button: UIButton!
+    
+    //MARK: - Properties
     
     var actualPlayerIsX = true
     var end = false
@@ -29,9 +38,7 @@ class ViewController: UIViewController {
     
     var choicesPlayerX = [String]()
     var choicesPlayerO = [String]()
-    
-    var randomSender: UIButton?
-    
+
     let xButtonTitle = NSMutableAttributedString(string: "X", attributes: [
         NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 60),
         NSAttributedString.Key.foregroundColor: UIColor.white
@@ -41,12 +48,40 @@ class ViewController: UIViewController {
         NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 60),
         NSAttributedString.Key.foregroundColor: UIColor.white
     ])
-    let resetButtonTitle = NSMutableAttributedString(string: "", attributes: [
-        NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 60),
-        NSAttributedString.Key.foregroundColor: UIColor.white
-    ])
     
+    //MARK: - Logic
     
+    func playerMove(sender: UIButton) {
+        let buttonTitle = sender.currentAttributedTitle
+        if buttonTitle == nil {
+            guard let label = sender.titleLabel?.text else { return }
+            if actualPlayerIsX {
+                choicesPlayerX.append(label)
+                sender.setAttributedTitle(xButtonTitle, for: .normal)
+                checkIfWon(choicesOfPlayer: choicesPlayerX)
+                if end {
+                    wonAlert(playerName: "X")
+                } else {
+                    changePlayer()
+                }
+                
+            } else {
+                choicesPlayerO.append(label)
+                sender.setAttributedTitle(oButtonTitle, for: .normal)
+                checkIfWon(choicesOfPlayer: choicesPlayerO)
+                if end {
+                    wonAlert(playerName: "O")
+                } else {
+                    changePlayer()
+                }
+            }
+        } else {
+            let alert = UIAlertController(title: "Not allowed", message: "You can't choose this spot", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Okay", style: .default)
+            alert.addAction(action)
+            present(alert, animated: true)
+        }
+    }
     
     func checkIfWon(choicesOfPlayer: Array<String>) {
         
@@ -61,6 +96,19 @@ class ViewController: UIViewController {
         else { end = false }
         
         drawCounter += 1
+    }
+    
+    func changePlayer() {
+        if drawCounter == 9 {
+            drawAlert()
+        }
+        actualPlayerIsX.toggle()
+        
+        if actualPlayerIsX {
+            playerMark.text = "X"
+        } else {
+            playerMark.text = "O"
+        }
     }
     
     func wonAlert(playerName: String) {
@@ -90,50 +138,6 @@ class ViewController: UIViewController {
         self.navigationController?.setViewControllers(viewcontrollers, animated: true)
     }
     
-    func playerMove(sender: UIButton) {
-        let buttonTitle = sender.currentAttributedTitle
-        if buttonTitle == nil {
-            guard let label = sender.titleLabel?.text else { return }
-            if actualPlayerIsX {
-                choicesPlayerX.append(label)
-                sender.setAttributedTitle(xButtonTitle, for: .normal)
-                print("X \(choicesPlayerX)")
-                checkIfWon(choicesOfPlayer: choicesPlayerX)
-                if end {
-                    wonAlert(playerName: "X")
-                } else {
-                    if drawCounter == 9 {
-                        drawAlert()
-                    }
-                    actualPlayerIsX.toggle()
-                }
-                
-            } else {
-                choicesPlayerO.append(label)
-                sender.setAttributedTitle(oButtonTitle, for: .normal)
-                print("O \(choicesPlayerO)")
-                checkIfWon(choicesOfPlayer: choicesPlayerO)
-                if end {
-                    wonAlert(playerName: "O")
-                } else {
-                    if drawCounter == 9 {
-                        drawAlert()
-                    }
-                    actualPlayerIsX.toggle()
-                }
-            }
-        } else {
-            let alert = UIAlertController(title: "Not allowed", message: "You can't choose this spot", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Okay", style: .default)
-            alert.addAction(action)
-            present(alert, animated: true)
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     //MARK: - Actions A
     @IBAction func didTapA1Button(_ sender: UIButton) {
@@ -167,7 +171,5 @@ class ViewController: UIViewController {
     @IBAction func didTapC3Button(_ sender: UIButton) {
         playerMove(sender: sender)
     }
-    
-    
 }
 
